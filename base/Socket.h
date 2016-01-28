@@ -27,7 +27,7 @@ public:
 		return sockfd_;
 	}
 	
-	void bindOrDie(const InAddress &addr);
+	void bindOrDie(const InetAddress &addr);
 	void listenOrDie();
 	
 	int connect(const InetAddress &addr);
