@@ -33,3 +33,4 @@ inline To implicit_cast(const From &f)
 {
 	return f;
 }
+
