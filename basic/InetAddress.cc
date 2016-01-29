@@ -5,6 +5,15 @@
 #include <strings.h>
 #include <arpa/inet.h>
 
+InetAddress::InetAddress(StringArg ip,uint16_t port)
+{
+	::bzero(&saddr_,sizeof(saddr_));
+	saddr_.sin_family=AF_INET;
+	saddr_.sin_port=htons(port);
+	if(::inet_pton(AF_INET,ip.c_str(),&saddr_.sin_addr)<=0)
+		printf("inet_pton error for %s\n",ip.c_str());
+}
+
 InetAddress::InetAddress(uint16_t port,bool loopbackOnly)
 {
 	::bzero(&saddr_,sizeof(saddr_));

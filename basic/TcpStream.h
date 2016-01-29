@@ -16,6 +16,8 @@ public:
 	static TcpStreamPtr connect(const InetAddress& serverAddr);
 	static TcpStreamPtr connect(const InetAddress& serverAddr,const InetAddress& localAddr);
 	
+	
+	InetAddress getPeerAddr() const;
 	//NOT thread safe
 	int receiveAll(void* buf,int len);
 	int receiveSome(void* buf,int len);

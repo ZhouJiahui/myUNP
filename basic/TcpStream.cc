@@ -64,6 +64,11 @@ int TcpStream::sendSome(const void* buf,int len)
 	return sock_.write(buf,len);
 }
 
+InetAddress TcpStream::getPeerAddr() const
+{
+	return sock_.getPeerAddr();
+}
+
 void TcpStream::setTcpNoDelay(bool on)
 {
 	sock_.setTcpNoDelay(on);
