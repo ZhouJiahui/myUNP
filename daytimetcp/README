@@ -1,0 +1,6 @@
+A simple sample to show unix network programming using the wrapper of Socket APIs.
+
+usage:
+./client 127.0.0.1 1234
+
+./server 1234
