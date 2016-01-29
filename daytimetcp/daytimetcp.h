@@ -5,4 +5,4 @@
 #include <cstdio>
 #include <cstring>
 #include <memory>
-const int MAXLINE=128;
+const int MAXLINE=64;
